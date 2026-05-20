@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AcademicDir — Diretório curado de recursos académicos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .font-serif-display { font-family: 'Lora', serif; }
+    .category-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .category-card { transition: all 0.2s ease; }
+  </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+  <!-- Header -->
+  <header class="border-b border-stone-200 bg-white">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 bg-emerald-700 rounded flex items-center justify-center text-white font-bold">A</div>
+        <span class="font-serif-display text-xl font-bold text-stone-900">AcademicDir</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-stone-600">
+        <a href="#" class="hover:text-emerald-700">Categorias</a>
+        <a href="#" class="hover:text-emerald-700">Editores</a>
+        <a href="#" class="hover:text-emerald-700">Sugerir recurso</a>
+        <a href="#" class="hover:text-emerald-700">API</a>
+        <a href="#" class="px-4 py-1.5 border border-stone-300 rounded-md hover:bg-stone-50">Entrar</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-b from-white to-stone-50 border-b border-stone-200">
+    <div class="max-w-4xl mx-auto px-6 py-16 text-center">
+      <h1 class="font-serif-display text-5xl font-bold text-stone-900 mb-4 leading-tight">
+        Um diretório humano<br/>para a investigação científica.
+      </h1>
+      <p class="text-lg text-stone-600 mb-8 max-w-2xl mx-auto">
+        Recursos académicos selecionados, revistos e mantidos por editores das suas áreas.
+        Sem algoritmos opacos, sem SEO inflacionado.
+      </p>
+
+      <div class="max-w-2xl mx-auto relative">
+        <input
+          type="text"
+          placeholder="Pesquisar bases de dados, revistas, repositórios..."
+          class="w-full px-5 py-4 pr-14 text-base border border-stone-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:border-transparent"
+        />
+        <button class="absolute right-2 top-1/2 -translate-y-1/2 p-2.5 bg-emerald-700 text-white rounded-md hover:bg-emerald-800">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-6 mt-8 text-sm text-stone-500">
+        <span><strong class="text-stone-800">12.483</strong> recursos</span>
+        <span class="text-stone-300">·</span>
+        <span><strong class="text-stone-800">247</strong> editores</span>
+        <span class="text-stone-300">·</span>
+        <span><strong class="text-stone-800">64</strong> categorias</span>
+        <span class="text-stone-300">·</span>
+        <span>atualizado <strong class="text-stone-800">hoje</strong></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categorias -->
+  <section class="max-w-6xl mx-auto px-6 py-16">
+    <div class="flex items-baseline justify-between mb-8">
+      <h2 class="font-serif-display text-3xl font-bold text-stone-900">Explorar por categoria</h2>
+      <a href="#" class="text-sm text-emerald-700 hover:underline">Ver todas as 64 categorias →</a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <!-- Card -->
+      <div class="category-card bg-white border border-stone-200 rounded-lg p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-2xl">📚</span>
+          <h3 class="font-semibold text-stone-900">Ciências Exatas</h3>
+        </div>
+        <ul class="space-y-2 text-sm">
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">Matemática</a><span class="text-stone-400">412</span></li>
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">Física</a><span class="text-stone-400">356</span></li>
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">Química</a><span class="text-stone-400">298</span></li>
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">Estatística</a><span class="text-stone-400">201</span></li>
+        </ul>
+      </div>
+
+      <div class="category-card bg-white border border-stone-200 rounded-lg p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-2xl">🧬</span>
+          <h3 class="font-semibold text-stone-900">Ciências da Vida</h3>
+        </div>
+        <ul class="space-y-2 text-sm">
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">Biologia</a><span class="text-stone-400">389</span></li>
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">Medicina</a><span class="text-stone-400">612</span></li>
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">Neurociência</a><span class="text-stone-400">174</span></li>
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">Genética</a><span class="text-stone-400">156</span></li>
+        </ul>
+      </div>
+
+      <div class="category-card bg-white border border-stone-200 rounded-lg p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-2xl">💻</span>
+          <h3 class="font-semibold text-stone-900">Ciências da Computação</h3>
+        </div>
+        <ul class="space-y-2 text-sm">
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">IA & Machine Learning</a><span class="text-stone-400">487</span></li>
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">Sistemas</a><span class="text-stone-400">223</span></li>
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">Teoria</a><span class="text-stone-400">156</span></li>
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">Interação Humano-Computador</a><span class="text-stone-400">134</span></li>
+        </ul>
+      </div>
+
+      <div class="category-card bg-white border border-stone-200 rounded-lg p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-2xl">🌍</span>
+          <h3 class="font-semibold text-stone-900">Ciências Sociais</h3>
+        </div>
+        <ul class="space-y-2 text-sm">
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">Economia</a><span class="text-stone-400">334</span></li>
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">Sociologia</a><span class="text-stone-400">198</span></li>
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">Psicologia</a><span class="text-stone-400">276</span></li>
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">Antropologia</a><span class="text-stone-400">89</span></li>
+        </ul>
+      </div>
+
+      <div class="category-card bg-white border border-stone-200 rounded-lg p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-2xl">📖</span>
+          <h3 class="font-semibold text-stone-900">Humanidades</h3>
+        </div>
+        <ul class="space-y-2 text-sm">
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">História</a><span class="text-stone-400">267</span></li>
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">Filosofia</a><span class="text-stone-400">189</span></li>
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">Linguística</a><span class="text-stone-400">134</span></li>
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">Literatura</a><span class="text-stone-400">156</span></li>
+        </ul>
+      </div>
+
+      <div class="category-card bg-white border border-stone-200 rounded-lg p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-2xl">⚙️</span>
+          <h3 class="font-semibold text-stone-900">Engenharia</h3>
+        </div>
+        <ul class="space-y-2 text-sm">
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">Civil</a><span class="text-stone-400">145</span></li>
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">Eletrotécnica</a><span class="text-stone-400">212</span></li>
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">Mecânica</a><span class="text-stone-400">178</span></li>
+          <li class="flex justify-between"><a href="#" class="text-stone-700 hover:text-emerald-700">Materiais</a><span class="text-stone-400">98</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Em destaque -->
+  <section class="bg-white border-t border-stone-200">
+    <div class="max-w-6xl mx-auto px-6 py-16">
+      <h2 class="font-serif-display text-3xl font-bold text-stone-900 mb-2">Em destaque esta semana</h2>
+      <p class="text-stone-600 mb-8">Seleção dos editores · semana de 4 a 10 de novembro</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <article class="border border-stone-200 rounded-lg p-6 hover:border-emerald-600 transition">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs px-2 py-0.5 bg-emerald-50 text-emerald-800 rounded">Repositórios</span>
+            <span class="text-xs px-2 py-0.5 bg-stone-100 text-stone-600 rounded">🔓 Aberto</span>
+          </div>
+          <h3 class="font-semibold text-lg text-stone-900 mb-2">Zenodo</h3>
+          <p class="text-sm text-stone-600 mb-4">Repositório multidisciplinar operado pelo CERN. Aceita datasets, software e publicações com DOI permanente.</p>
+          <div class="flex items-center justify-between text-xs text-stone-500">
+            <span>zenodo.org</span>
+            <span>⭐ 4.9 · 87 reviews</span>
+          </div>
+        </article>
+
+        <article class="border border-stone-200 rounded-lg p-6 hover:border-emerald-600 transition">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs px-2 py-0.5 bg-emerald-50 text-emerald-800 rounded">Base de Dados</span>
+            <span class="text-xs px-2 py-0.5 bg-stone-100 text-stone-600 rounded">🔓 Aberto</span>
+          </div>
+          <h3 class="font-semibold text-lg text-stone-900 mb-2">OpenAlex</h3>
+          <p class="text-sm text-stone-600 mb-4">Grafo aberto de literatura científica com mais de 240 milhões de obras, autores e instituições. API gratuita.</p>
+          <div class="flex items-center justify-between text-xs text-stone-500">
+            <span>openalex.org</span>
+            <span>⭐ 4.8 · 142 reviews</span>
+          </div>
+        </article>
+
+        <article class="border border-stone-200 rounded-lg p-6 hover:border-emerald-600 transition">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-xs px-2 py-0.5 bg-emerald-50 text-emerald-800 rounded">Ferramenta</span>
+            <span class="text-xs px-2 py-0.5 bg-stone-100 text-stone-600 rounded">🔓 Freemium</span>
+          </div>
+          <h3 class="font-semibold text-lg text-stone-900 mb-2">Connected Papers</h3>
+          <p class="text-sm text-stone-600 mb-4">Visualização interativa de redes de citações. Útil para explorar a vizinhança bibliográfica de um artigo seminal.</p>
+          <div class="flex items-center justify-between text-xs text-stone-500">
+            <span>connectedpapers.com</span>
+            <span>⭐ 4.7 · 56 reviews</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Como funciona -->
+  <section class="bg-stone-100 border-t border-stone-200">
+    <div class="max-w-6xl mx-auto px-6 py-16">
+      <h2 class="font-serif-display text-3xl font-bold text-stone-900 text-center mb-12">Como funciona</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-12 h-12 bg-emerald-700 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">1</div>
+          <h3 class="font-semibold mb-2">Editores especialistas</h3>
+          <p class="text-sm text-stone-600">Cada categoria tem um ou mais editores responsáveis pela curadoria, com identidade pública e histórico verificável.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 bg-emerald-700 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">2</div>
+          <h3 class="font-semibold mb-2">Submissão revista</h3>
+          <p class="text-sm text-stone-600">Qualquer pessoa pode sugerir recursos. As submissões passam por revisão editorial documentada antes de serem publicadas.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 bg-emerald-700 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">3</div>
+          <h3 class="font-semibold mb-2">Dados abertos</h3>
+          <p class="text-sm text-stone-600">O diretório está disponível via API e dumps periódicos sob licença aberta. Sem lock-in, sem rastreio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-stone-900 text-stone-400">
+    <div class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-7 h-7 bg-emerald-600 rounded flex items-center justify-center text-white font-bold text-sm">A</div>
+          <span class="font-serif-display text-lg font-bold text-white">AcademicDir</span>
+        </div>
+        <p class="text-stone-500">Diretório curado para a comunidade científica.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3">Explorar</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-white">Categorias</a></li>
+          <li><a href="#" class="hover:text-white">Em destaque</a></li>
+          <li><a href="#" class="hover:text-white">Adicionados recentemente</a></li>
+          <li><a href="#" class="hover:text-white">RSS</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3">Comunidade</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-white">Sugerir recurso</a></li>
+          <li><a href="#" class="hover:text-white">Candidatar a editor</a></li>
+          <li><a href="#" class="hover:text-white">Diretrizes</a></li>
+          <li><a href="#" class="hover:text-white">Fórum</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3">Projeto</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-white">Sobre</a></li>
+          <li><a href="#" class="hover:text-white">API & Dados</a></li>
+          <li><a href="#" class="hover:text-white">Código no GitHub</a></li>
+          <li><a href="#" class="hover:text-white">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-stone-800">
+      <div class="max-w-6xl mx-auto px-6 py-4 text-xs text-stone-500 flex justify-between">
+        <span>© 2025 AcademicDir · Conteúdo sob CC BY-SA 4.0</span>
+        <span>Versão protótipo · v0.1</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
