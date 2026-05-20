@@ -1,3 +1,1 @@
 # AcademicDir
-# AcademicDir
-# AcademicDir
